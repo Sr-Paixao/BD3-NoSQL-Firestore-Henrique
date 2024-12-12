@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Alunos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Alunos</h1>
+        
+        <form id="form">
+            <input type="text" name="cod_aluno" placeholder="Código do Aluno" required>
+            <input type="text" name="cod_turma" placeholder="Código da Turma" required>
+            <input type="text" name="nome" placeholder="Nome" required>
+            <input type="text" name="cpf" placeholder="CPF" required>
+            <input type="text" name="rg" placeholder="RG" required>
+            <input type="text" name="telefone_aluno" placeholder="Telefone do Aluno" required>
+            <input type="text" name="telefone_responsavel" placeholder="Telefone do Responsável" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="date" name="data_nascimento" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+
+        <div id="alunos"></div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyA_rYSTSGpWdmmfb2t5f_nhWtlmxjj7ab0",
+            authDomain: "bd3-nosql-firestore-a0e2c.firebaseapp.com",
+            projectId: "bd3-nosql-firestore-a0e2c",
+            storageBucket: "bd3-nosql-firestore-a0e2c.appspot.com",
+            messagingSenderId: "347586481458",
+            appId: "1:347586481458:web:fd2bbaa17a1f10e8b89b2b"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
